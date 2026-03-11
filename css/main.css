@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+section {
+  min-height: 100vh;
+}
+
 #mainVisual .swiper-slide img {
   width: 100%;
 }

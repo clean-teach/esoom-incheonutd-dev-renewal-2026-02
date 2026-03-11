@@ -6,6 +6,11 @@
   left: 0;
   width: 100%;
   z-index: 10;
+  transform-origin: center top;
+  transition: all 0.3s ease;
+}
+#header.active {
+  transform: translateY(-3.125rem);
 }
 
 #header h1 {
@@ -13,6 +18,14 @@
   top: 0.625rem;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 11;
+}
+#header h1 img {
+  transform-origin: center;
+  transition: all 0.3s ease;
+}
+#header.active h1 img {
+  transform: scale(0.4) translateY(16%);
 }
 
 #header #topNav {
@@ -53,9 +66,16 @@
 }
 
 #header #gnb {
-  background-color: #1148ad;
+  background-color: rgba(17, 72, 173, 1);
   color: #ffffff;
   height: 4.375rem;
+  transition: all 0.3s ease;
+}
+#header.active #gnb {
+  background-color: rgba(17, 17, 17, 0.6);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
 }
 #header #gnb .center-wrap {
   height: 100%;
