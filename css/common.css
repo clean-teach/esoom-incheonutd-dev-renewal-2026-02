@@ -74,6 +74,13 @@
 }
 /******************************** Font *******************************/
 
+/******************************** Variables *******************************/
+:root {
+  --color-primary: #1148ad;
+  --color-secondary: #2b3137;
+}
+/******************************** Variables *******************************/
+
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -93,6 +100,7 @@ body {
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
+  padding: 0 4rem;
 }
 .hide {
   position: absolute;
