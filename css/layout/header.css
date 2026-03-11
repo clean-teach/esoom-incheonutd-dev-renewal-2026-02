@@ -102,10 +102,11 @@
   background-color: #ffffff;
   transform-origin: top center;
   transition: all 0.3s ease;
-  transform: rotateX(90deg);
+  height: 0;
+  overflow: hidden;
 }
 #siteMap.active {
-  transform: rotateX(0);
+  height: auto;
 }
 #siteMap .depth-01 {
   display: flex;
