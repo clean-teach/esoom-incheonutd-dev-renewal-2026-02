@@ -7,8 +7,9 @@
 
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/layout/header.css" />
+    <link rel="stylesheet" href="css/layout/footer.css" />
+    <link rel="stylesheet" href="css/main.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
@@ -20,7 +21,7 @@
         <a href="/" title="홈으로 이동">
           <img
             src="./assets/images/common/emblem/svg/logo_incheon_united_color.svg"
-            alt=""
+            alt="인천 유나이티드 엠블럼"
           />
           <span class="hide">인천 유나이티드</span>
         </a>
@@ -338,11 +339,118 @@
       </section>
     </main>
 
-    <footer></footer>
+    <footer id="footer">
+      <div class="partner-area">
+        <div class="center-wrap">
+          <ul>
+            <li>
+              <a href="" target="_blank" title="새 텝에서 열기">
+                <img
+                  src="./assets/images/common/logo/svg/logo_incheon_united_premier_sponsor.svg"
+                  alt="인천 유나이티드 프리미어 스폰서 로고"
+                />
+                <span class="hide">인천 유나이티드 프리미어 스폰서</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.incheon.go.kr/index"
+                target="_blank"
+                title="새 텝에서 열기"
+              >
+                <img
+                  src="./assets/images/common/logo/logo_incheon_01_ffffff_249x54.png"
+                  alt="인천 광역시 로고"
+                />
+                <span class="hide">인천 광역시</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.ifez.go.kr/intro.do"
+                target="_blank"
+                title="새 텝에서 열기"
+              >
+                <img
+                  src="./assets/images/common/logo/logo_ifez_01_ffffff_172x54.png"
+                  alt="인천경제자유구역 로고"
+                />
+                <span class="hide">인천경제자유구역</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.shinhan.com/index.jsp"
+                target="_blank"
+                title="새 텝에서 열기"
+              >
+                <img
+                  src="./assets/images/common/logo/logo_shinhan_01_ffffff_239x55.png"
+                  alt="신한은행 로고"
+                />
+                <span class="hide">신한은행</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-area">
+        <div class="center-wrap">
+          <h2>
+            <a href="/" title="홈으로 이동">
+              <img
+                src="./assets/images/common/emblem/svg/logo_incheon_united_white.svg"
+                alt="인천 유나이티드 엠블럼"
+              />
+              <span class="hide">인천 유나이티드</span>
+            </a>
+          </h2>
+          <div>
+            <nav class="fnb">
+              <ul>
+                <li><a href="" title="페이지 이동">개인정보처리방침</a></li>
+                <li><a href="" title="페이지 이동">이용약관</a></li>
+              </ul>
+            </nav>
+            <address>
+              <dl>
+                <dt class="hide">상호</dt>
+                <dd><b>(주)인천유나이티드</b></dd>
+                <dt>대표이사</dt>
+                <dd>조건도</dd>
+                <dt>사업자번호</dt>
+                <dd>121-81-62544</dd>
+                <dt>통신판매신고</dt>
+                <dd>인천미추홀구 529호</dd>
+              </dl>
+              <dl>
+                <dt>A</dt>
+                <dd>인천광역시 중구 참외전로 246(도원동) (우편번호 22328)</dd>
+                <dt>T</dt>
+                <dd>
+                  <a href="tel:+032880-5500" title="전화걸기">(032)880-5500</a>
+                </dd>
+                <dt>F</dt>
+                <dd>(032)423-1509</dd>
+                <dt>E</dt>
+                <dd>
+                  <a
+                    href="mailto:incheonutd@incheonutd.com"
+                    title="이메일 보내기"
+                    >incheonutd@incheonutd.com</a
+                  >
+                </dd>
+              </dl>
+            </address>
+            <div class="copyright">
+              Copyright © INCHEON UNITED FC. all right reserved
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js">
-      console.log('swiper loaded');
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script>
       const swiper = new Swiper('.swiper', {
         // Optional parameters
@@ -367,7 +475,6 @@
           el: '.swiper-scrollbar',
         },
       });
-      console.log(swiper);
     </script>
   </body>
 </html>
