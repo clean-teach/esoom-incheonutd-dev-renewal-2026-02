@@ -6,7 +6,7 @@
   right: 0;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 10;
+  z-index: 9;
 }
 #snb .quick-nav {
   background-color: #ffffff;
@@ -38,5 +38,30 @@
   filter: brightness(0.5);
 }
 #snb .quick-nav li a:active {
+  transform: scale(0.9);
+}
+
+.scroll-top-button {
+  background-color: #ffdb00;
+  color: var(--color-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.313rem;
+  width: 3.125rem;
+  height: 3.125rem;
+
+  position: fixed;
+  right: 3.75rem;
+  bottom: 3.75rem;
+  z-index: 9;
+
+  transform-origin: center;
+  transition: all 0.3s ease-in-out;
+}
+.scroll-top-button:hover {
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
+}
+.scroll-top-button:active {
   transform: scale(0.9);
 }
