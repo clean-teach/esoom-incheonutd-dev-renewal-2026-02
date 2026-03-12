@@ -42,7 +42,7 @@
 }
 
 .scroll-top-button {
-  background-color: #ffdb00;
+  background-color: var(--color-secondary);
   color: var(--color-primary);
   display: flex;
   justify-content: center;

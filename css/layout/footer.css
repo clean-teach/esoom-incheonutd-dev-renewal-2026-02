@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
 #footer {
-  background: #2b3137 url(../../assets/images/layout/footer/bg.png) no-repeat
-    top;
+  background: var(--color-mono-01) url(../../assets/images/layout/footer/bg.png)
+    no-repeat top;
   background-attachment: fixed;
   background-size: cover;
   color: #ffffff;

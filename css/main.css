@@ -4,10 +4,13 @@
   font-weight: 900;
   font-size: 2.5rem;
   text-transform: uppercase;
-  color: var(--color-secondary);
+  color: var(--color-mono-01);
 }
 .section-title .point {
   color: var(--color-primary);
+}
+.section-title .point02 {
+  color: var(--color-secondary);
 }
 
 #mainVisualSection .swiper-slide img {
@@ -61,7 +64,7 @@
 }
 #matchScheduleSection .schedule-area > li,
 #matchScheduleSection .schedule-area > li.away {
-  background-color: var(--color-secondary);
+  background-color: var(--color-mono-01);
 }
 #matchScheduleSection .schedule-area > li::after,
 #matchScheduleSection .schedule-area > li.away::after {
@@ -190,7 +193,7 @@
   font-weight: 400;
 }
 #matchScheduleSection .ranking-area .team-area th {
-  color: var(--color-secondary);
+  color: var(--color-mono-01);
   height: 2.5rem;
 }
 #matchScheduleSection .ranking-area .team-area td {
@@ -198,7 +201,7 @@
   height: 3.125rem;
 }
 #matchScheduleSection .ranking-area .team-area .point td {
-  background-color: #ffdb00;
+  background-color: var(--color-secondary);
   color: var(--color-primary);
   font-weight: 700;
 }
@@ -229,7 +232,7 @@
 #matchScheduleSection .ranking-area .player-area > ul .title {
   font-weight: 900;
   font-size: 1.25rem;
-  color: var(--color-secondary);
+  color: var(--color-mono-01);
   text-transform: uppercase;
 }
 #matchScheduleSection .ranking-area .player-area > ul > li {
@@ -248,7 +251,7 @@
 }
 #matchScheduleSection .ranking-area .player-area .box .score {
   font-size: 3.125rem;
-  color: #ffdb00;
+  color: var(--color-secondary);
 }
 #matchScheduleSection .ranking-area .player-area .box .name {
   font-size: 1.875rem;
@@ -258,4 +261,14 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.bg-field {
+  background: var(--color-primary) url(../assets/images/page/main/bg_field.png)
+    no-repeat top;
+  background-size: 100%;
+}
+
+section {
+  min-height: 100vh;
 }

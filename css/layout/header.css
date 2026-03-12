@@ -126,7 +126,7 @@
 }
 #header #gnb .depth-02 a {
   font-weight: 400;
-  color: var(--color-secondary);
+  color: var(--color-mono-01);
   transition: all 0.3s ease-in-out;
   word-break: keep-all;
   text-wrap: nowrap;
@@ -194,7 +194,7 @@
   content: '- ';
 }
 #siteMap .close-button {
-  background-color: #2b3137;
+  background-color: var(--color-mono-01);
   color: #ffffff;
   border-radius: 100%;
   display: flex;
