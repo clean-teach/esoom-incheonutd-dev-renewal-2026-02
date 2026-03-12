@@ -65,3 +65,14 @@
 .scroll-top-button:active {
   transform: scale(0.9);
 }
+
+@media screen and (max-width: 768px) {
+  #snb {
+    display: none;
+  }
+
+  .scroll-top-button {
+    right: 1.5rem;
+    bottom: 1.5rem;
+  }
+}
