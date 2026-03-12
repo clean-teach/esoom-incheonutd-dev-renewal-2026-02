@@ -87,14 +87,51 @@
   justify-content: space-between;
   align-items: center;
 }
-#header #gnb .center-wrap > ul {
+#header #gnb .depth-01 {
+  height: 100%;
   display: flex;
   gap: 5rem;
   align-items: center;
 }
-#header #gnb .center-wrap a {
+#header #gnb .depth-01 > li {
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+#header #gnb .depth-01 > li:hover .depth-02 {
+  display: block;
+}
+#header #gnb .depth-01 a {
   font-weight: 600;
   font-size: 1.125rem;
+}
+#header #gnb .depth-02 {
+  position: absolute;
+  top: 3.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff;
+  border-radius: 0.313rem;
+  padding: 0.625rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  display: none;
+}
+#header #gnb .depth-02 a {
+  font-weight: 400;
+  color: var(--color-secondary);
+  transition: all 0.3s ease-in-out;
+  word-break: keep-all;
+  text-wrap: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.313rem;
+}
+#header #gnb .depth-02 a.active,
+#header #gnb .depth-02 a:hover {
+  font-weight: 700;
+  color: var(--color-primary);
 }
 
 #siteMap {
