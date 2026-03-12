@@ -1,9 +1,261 @@
 @charset "UTF-8";
 
-section {
-  min-height: 100vh;
+.section-title {
+  font-weight: 900;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+}
+.section-title .point {
+  color: var(--color-primary);
 }
 
-#mainVisual .swiper-slide img {
+#mainVisualSection .swiper-slide img {
   width: 100%;
+}
+
+#matchScheduleSection {
+  background: url(../assets/images/page/main/section/match-schedule/bg.png)
+    no-repeat bottom;
+  background-size: cover;
+  padding: 7.5rem 0;
+}
+#matchScheduleSection .section-title {
+  text-align: center;
+}
+
+#matchScheduleSection .schedule-area {
+  margin-top: 2.5rem;
+  display: flex;
+  align-items: stretch;
+  gap: 2.5rem;
+}
+#matchScheduleSection .schedule-area > li {
+  flex: 1;
+  position: relative;
+  border-radius: 0.625rem;
+  padding: 1.875rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+}
+#matchScheduleSection .schedule-area > li::after {
+  position: absolute;
+  top: 0.625rem;
+  right: 1.875rem;
+  font-weight: 900;
+  font-size: 5rem;
+  color: rgba(255, 255, 255, 0.2);
+  text-transform: uppercase;
+}
+#matchScheduleSection .schedule-area > li.home {
+  background-color: var(--color-primary);
+}
+#matchScheduleSection .schedule-area > li.home::after {
+  content: 'H';
+}
+#matchScheduleSection .schedule-area > li.home .our {
+  order: 1;
+}
+#matchScheduleSection .schedule-area > li.home .opposing {
+  order: 3;
+}
+#matchScheduleSection .schedule-area > li,
+#matchScheduleSection .schedule-area > li.away {
+  background-color: var(--color-secondary);
+}
+#matchScheduleSection .schedule-area > li::after,
+#matchScheduleSection .schedule-area > li.away::after {
+  content: 'A';
+}
+#matchScheduleSection .schedule-area > li .our,
+#matchScheduleSection .schedule-area > li.away .our {
+  order: 3;
+}
+#matchScheduleSection .schedule-area > li .center-area,
+#matchScheduleSection .schedule-area > li.away .center-area {
+  order: 2;
+}
+#matchScheduleSection .schedule-area > li .opposing,
+#matchScheduleSection .schedule-area > li.away .opposing {
+  order: 1;
+}
+#matchScheduleSection .schedule-area .date-time-area {
+  font-weight: 800;
+  font-size: 1.625rem;
+}
+#matchScheduleSection .schedule-area .match-area {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 1.125rem;
+  margin-top: 2.5rem;
+}
+#matchScheduleSection .schedule-area .team {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  max-width: 6.875rem;
+}
+#matchScheduleSection .schedule-area .team img {
+  object-fit: contain;
+  width: 6.875rem;
+  height: 6.875rem;
+}
+#matchScheduleSection .schedule-area .team .name {
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+#matchScheduleSection .schedule-area .center-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  text-align: center;
+}
+#matchScheduleSection .schedule-area .center-area .main {
+  font-weight: 800;
+  font-size: 3.75rem;
+  text-transform: uppercase;
+}
+#matchScheduleSection .schedule-area .center-area .sub {
+  font-weight: 400;
+  font-size: 1rem;
+}
+#matchScheduleSection .schedule-area .btn-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  margin-top: 1.25rem;
+}
+#matchScheduleSection .schedule-area .btn-area a,
+#matchScheduleSection .schedule-area .btn-area button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  background-color: #ffffff;
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 1rem;
+  min-width: 7.5rem;
+  min-height: 2.5rem;
+  padding: 0.25rem 1rem;
+  border-radius: 0.313rem;
+  transform-origin: center;
+  transition: all 0.3s ease-in-out;
+}
+#matchScheduleSection .schedule-area .btn-area a:hover,
+#matchScheduleSection .schedule-area .btn-area button:hover {
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2)) brightness(1.2);
+}
+#matchScheduleSection .schedule-area .btn-area a:active,
+#matchScheduleSection .schedule-area .btn-area button:active {
+  transform: scale(0.9);
+}
+
+#matchScheduleSection .ranking-area {
+  background-color: rgba(178, 210, 242, 0.5);
+  border-radius: 0.625rem;
+  margin-top: 2.5rem;
+  padding: 2.5rem 0;
+  display: flex;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+#matchScheduleSection .ranking-area > div {
+  padding: 0 3.125rem;
+  flex: auto;
+}
+#matchScheduleSection .ranking-area > div + div {
+  border-left: 1px solid rgba(17, 72, 173, 0.3);
+}
+
+#matchScheduleSection .ranking-area > div > .title {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1.625rem;
+  color: var(--color-primary);
+  text-align: center;
+}
+
+#matchScheduleSection .ranking-area .team-area table {
+  margin-top: 1.875rem;
+}
+#matchScheduleSection .ranking-area .team-area th,
+#matchScheduleSection .ranking-area .team-area td {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+}
+#matchScheduleSection .ranking-area .team-area th {
+  color: var(--color-secondary);
+  height: 2.5rem;
+}
+#matchScheduleSection .ranking-area .team-area td {
+  color: rgba(43, 49, 55, 0.5);
+  height: 3.125rem;
+}
+#matchScheduleSection .ranking-area .team-area .point td {
+  background-color: #ffdb00;
+  color: var(--color-primary);
+  font-weight: 700;
+}
+#matchScheduleSection .ranking-area .team-area .point td:first-child {
+  border-top-left-radius: 0.313rem;
+  border-bottom-left-radius: 0.313rem;
+}
+#matchScheduleSection .ranking-area .team-area .point td:last-child {
+  border-top-right-radius: 0.313rem;
+  border-bottom-right-radius: 0.313rem;
+}
+#matchScheduleSection .ranking-area .team-area td .team {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.313rem;
+}
+#matchScheduleSection .ranking-area .team-area td .team img {
+  width: 1.5rem;
+}
+
+#matchScheduleSection .ranking-area .player-area > ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin-top: 1.875rem;
+}
+#matchScheduleSection .ranking-area .player-area > ul .title {
+  font-weight: 900;
+  font-size: 1.25rem;
+  color: var(--color-secondary);
+  text-transform: uppercase;
+}
+#matchScheduleSection .ranking-area .player-area > ul > li {
+  position: relative;
+}
+#matchScheduleSection .ranking-area .player-area .box {
+  background-color: var(--color-primary);
+  border-radius: 0.625rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.25rem 1.25rem;
+  font-weight: 900;
+  color: #ffffff;
+  margin-top: 0.75rem;
+}
+#matchScheduleSection .ranking-area .player-area .box .score {
+  font-size: 3.125rem;
+  color: #ffdb00;
+}
+#matchScheduleSection .ranking-area .player-area .box .name {
+  font-size: 1.875rem;
+}
+#matchScheduleSection .ranking-area .player-area .box img {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }

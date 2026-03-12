@@ -100,6 +100,7 @@ body {
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
+  box-sizing: content-box;
   padding: 0 4rem;
 }
 .hide {
