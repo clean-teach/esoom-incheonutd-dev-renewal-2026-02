@@ -85,7 +85,7 @@
   margin-top: 1.25rem;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 1024px) {
   #footer .partner-area {
     padding: 2.5rem 0;
   }
