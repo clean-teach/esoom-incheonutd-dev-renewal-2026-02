@@ -111,8 +111,13 @@ body {
   height: 0;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 1024px) {
   .center-wrap {
     padding: 0 1.25rem;
+  }
+}
+@media screen and (max-width: 640px) {
+  .center-wrap {
+    padding: 0 1rem;
   }
 }

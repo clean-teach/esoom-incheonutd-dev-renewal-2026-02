@@ -93,6 +93,12 @@
   gap: 5rem;
   align-items: center;
 }
+#header #gnb .depth-01:first-child {
+  justify-content: start;
+}
+#header #gnb .depth-01:last-child {
+  justify-content: end;
+}
 #header #gnb .depth-01 > li {
   height: 100%;
   position: relative;
@@ -105,6 +111,7 @@
 #header #gnb .depth-01 a {
   font-weight: 600;
   font-size: 1.125rem;
+  text-wrap: nowrap;
 }
 #header #gnb .depth-02 {
   position: absolute;
@@ -207,4 +214,47 @@
 }
 #siteMap .close-button:active {
   transform: scale(0.8);
+}
+
+@media screen and (max-width: 1400px) {
+  #header #gnb .depth-01 {
+    gap: 1rem;
+    width: 40%;
+  }
+  #header #gnb .depth-01:first-child,
+  #header #gnb .depth-01:last-child {
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #header.active {
+    transform: translateY(-4rem);
+  }
+
+  #header h1 {
+    width: 2.75rem;
+  }
+
+  #header #topNav {
+    background-color: rgba(17, 72, 173, 1);
+    height: 3.75rem;
+  }
+  #header #topNav .sns-nav {
+    display: none;
+  }
+  #header #topNav .util-nav {
+    width: 100%;
+    justify-content: space-between;
+  }
+  #header #topNav .util-nav .ticket {
+    display: none;
+  }
+  #header #topNav .util-nav .cart {
+    display: none;
+  }
+
+  #header #gnb {
+    display: none;
+  }
 }
