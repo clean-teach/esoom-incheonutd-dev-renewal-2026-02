@@ -98,7 +98,6 @@ body {
 
 /************************  Utility  *************************/
 .center-wrap {
-  width: 100%;
   max-width: 1400px;
   margin: 0 auto;
   box-sizing: content-box;
@@ -111,6 +110,9 @@ body {
   overflow: hidden;
   width: 0;
   height: 0;
+}
+.table-scroll-wrap {
+  overflow-x: auto;
 }
 
 @media screen and (max-width: 1024px) {

@@ -22,6 +22,7 @@
     no-repeat bottom;
   background-size: cover;
   padding: 7.5rem 0;
+  overflow-x: hidden;
 }
 #matchScheduleSection .section-title {
   text-align: center;
@@ -30,7 +31,6 @@
 #matchScheduleSection .schedule-area {
   margin-top: 2.5rem;
   display: flex;
-  align-items: stretch;
   gap: 2.5rem;
 }
 #matchScheduleSection .schedule-area > li {
@@ -40,6 +40,7 @@
   padding: 1.875rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   color: #ffffff;
+  height: auto;
 }
 #matchScheduleSection .schedule-area > li::after {
   position: absolute;
@@ -112,7 +113,7 @@
 #matchScheduleSection .schedule-area .center-area {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   gap: 0.625rem;
   text-align: center;
@@ -130,6 +131,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 0.625rem;
   margin-top: 1.25rem;
 }
@@ -191,6 +193,7 @@
   text-align: center;
   font-size: 1rem;
   font-weight: 400;
+  min-width: 2rem;
 }
 #matchScheduleSection .ranking-area .team-area th {
   color: var(--color-mono-01);
@@ -218,6 +221,7 @@
   justify-content: center;
   align-items: center;
   gap: 0.313rem;
+  min-width: 4rem;
 }
 #matchScheduleSection .ranking-area .team-area td .team img {
   width: 1.5rem;
@@ -261,6 +265,7 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+  max-width: 50%;
 }
 
 .bg-field {
@@ -271,7 +276,7 @@
 
 #bottomBannerSection {
   background: url(../assets/images/page/main/section/bottom-banner/bg.jpg)
-    no-repeat right;
+    no-repeat center;
   background-size: cover;
   color: #ffffff;
   display: flex;
@@ -281,7 +286,6 @@
 }
 #bottomBannerSection > article {
   max-width: 764px;
-  /* box-sizing: content-box; */
   font-weight: 400;
   font-size: 1rem;
 }
@@ -324,4 +328,111 @@
   /* background: url(../assets/images/page/main/section/bottom-banner/bg_iysa.png)
     no-repeat left;
   background-size: cover; */
+}
+
+@media screen and (max-width: 1600px) {
+  #matchScheduleSection .schedule-area {
+    gap: 0;
+  }
+
+  #matchScheduleSection .ranking-area {
+    padding: 0 2.5rem;
+    flex-direction: column;
+  }
+  #matchScheduleSection .ranking-area > div {
+    padding: 3.125rem 0;
+  }
+  #matchScheduleSection .ranking-area > div + div {
+    border-left: none;
+    border-top: 1px solid rgba(17, 72, 173, 0.3);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  #matchScheduleSection {
+    padding: 2.5rem 0;
+  }
+
+  #matchScheduleSection .schedule-area {
+    margin-top: 1.25rem;
+  }
+  #matchScheduleSection .schedule-area > li {
+    padding: 1.25rem;
+  }
+  #matchScheduleSection .schedule-area > li::after {
+    right: 1.5rem;
+    font-size: 3.125rem;
+  }
+  #matchScheduleSection .schedule-area .date-time-area {
+    font-size: 1.25rem;
+  }
+  #matchScheduleSection .schedule-area .match-area {
+    gap: 0;
+    margin-top: 1.875rem;
+  }
+  #matchScheduleSection .schedule-area .team {
+    max-width: none;
+    min-width: 5rem;
+  }
+  #matchScheduleSection .schedule-area .team img {
+    width: 5rem;
+    height: 5rem;
+  }
+  #matchScheduleSection .schedule-area .center-area .main {
+    font-size: 1.875rem;
+  }
+  #matchScheduleSection .schedule-area .center-area .sub {
+    font-size: 0.875rem;
+  }
+  #matchScheduleSection .schedule-area .btn-area a,
+  #matchScheduleSection .schedule-area .btn-area button {
+    gap: 0.313rem;
+  }
+
+  #matchScheduleSection .ranking-area {
+    padding: 0 1.25rem;
+    flex-direction: column;
+  }
+  #matchScheduleSection .ranking-area > div {
+    padding: 1.875rem 0;
+  }
+  #matchScheduleSection .ranking-area > div + div {
+    border-left: none;
+    border-top: 1px solid rgba(17, 72, 173, 0.3);
+  }
+
+  #matchScheduleSection .ranking-area > div > .title {
+    font-size: 1.25rem;
+  }
+
+  #matchScheduleSection .ranking-area .team-area table {
+    margin-top: 0.625rem;
+  }
+  #matchScheduleSection .ranking-area .team-area th,
+  #matchScheduleSection .ranking-area .team-area td {
+    font-size: 0.875rem;
+  }
+
+  #matchScheduleSection .ranking-area .player-area > ul {
+    margin-top: 0.625rem;
+  }
+  #matchScheduleSection .ranking-area .player-area > ul .title {
+    font-size: 1.125rem;
+  }
+  #matchScheduleSection .ranking-area .player-area .box .score {
+    font-size: 1.875rem;
+  }
+  #matchScheduleSection .ranking-area .player-area .box .name {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  #matchScheduleSection .ranking-area .player-area > ul {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
