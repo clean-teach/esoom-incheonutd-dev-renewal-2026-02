@@ -274,6 +274,69 @@
   background-size: 100%;
 }
 
+#iufcBlueMarket {
+  padding: 7.5rem 0;
+}
+#iufcBlueMarket .top-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#iufcBlueMarket .top-area .btn-area {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 0.625rem;
+}
+#iufcBlueMarket .top-area .btn-area button {
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  opacity: 0.5;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  transform-origin: center;
+}
+#iufcBlueMarket .top-area .btn-area button.prev {
+  transform: rotate(180deg);
+}
+#iufcBlueMarket .goods-list {
+  margin-top: 1.25rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+#iufcBlueMarket .goods-list > li {
+  position: relative;
+}
+#iufcBlueMarket .goods-list > li img {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border-top-left-radius: 0.625rem;
+  border-top-right-radius: 0.625rem;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+#iufcBlueMarket .goods-list > li .txt-area {
+  position: relative;
+  z-index: 1;
+  background-color: #ffffff;
+  padding: 1.25rem 0;
+  font-weight: 400;
+  font-size: 1rem;
+}
+#iufcBlueMarket .goods-list > li .txt-area .price {
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--color-primary);
+}
+
 #bottomBannerSection {
   background: url(../assets/images/page/main/section/bottom-banner/bg.jpg)
     no-repeat center;
