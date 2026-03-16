@@ -269,6 +269,59 @@
   background-size: 100%;
 }
 
-section {
-  min-height: 100vh;
+#bottomBannerSection {
+  background: url(../assets/images/page/main/section/bottom-banner/bg.jpg)
+    no-repeat right;
+  background-size: cover;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0;
+}
+#bottomBannerSection > article {
+  max-width: 764px;
+  /* box-sizing: content-box; */
+  font-weight: 400;
+  font-size: 1rem;
+}
+#bottomBannerSection > article:nth-child(odd) {
+  padding-left: 4rem;
+}
+#bottomBannerSection > article:nth-child(even) {
+  padding-right: 4rem;
+  padding-left: 16.25rem;
+}
+#bottomBannerSection .section-title {
+  font-size: 1.625rem;
+  margin-bottom: 2.5rem;
+}
+#bottomBannerSection .btn-area {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: start;
+  gap: 1.25rem;
+}
+#bottomBannerSection .btn-area a,
+#bottomBannerSection .btn-area button {
+  border: 1px solid #ffffff;
+  border-radius: 0.313rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  font-weight: 700;
+  font-size: 1rem;
+  min-height: 2.75rem;
+  padding: 0.625rem 1.875rem;
+}
+#bottomBannerSection > .iu-academy {
+  /* background: url(../assets/images/page/main/section/bottom-banner/bg_iua.png)
+    no-repeat right;
+  background-size: cover; */
+}
+#bottomBannerSection > .incheon-youth-sports-agency {
+  /* background: url(../assets/images/page/main/section/bottom-banner/bg_iysa.png)
+    no-repeat left;
+  background-size: cover; */
 }
