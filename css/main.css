@@ -483,6 +483,28 @@
     font-size: 1.25rem;
   }
 
+  #iufcBlueMarket {
+    padding: 2.5rem 0;
+  }
+  #iufcBlueMarket .top-area .btn-area {
+    gap: 0.313rem;
+  }
+  #iufcBlueMarket .top-area .btn-area button {
+    width: 2rem;
+    height: 2rem;
+  }
+  #iufcBlueMarket .goods-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.625rem;
+  }
+  #iufcBlueMarket .goods-list > li .txt-area {
+    padding: 0.625rem 0;
+    font-size: 0.875rem;
+  }
+  #iufcBlueMarket .goods-list > li .txt-area .price {
+    font-size: 0.875rem;
+  }
+
   #bottomBannerSection {
     background: none;
     flex-direction: column;
