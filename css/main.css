@@ -274,21 +274,126 @@
   background-size: 100%;
 }
 
-#iufcBlueMarket {
-  padding: 7.5rem 0;
+#iufcFeedsSection {
+  padding-top: 7.5rem;
+  width: 100%;
+  overflow-x: hidden;
 }
-#iufcBlueMarket .top-area {
+#iufcFeedsSection .top-area {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-#iufcBlueMarket .top-area .btn-area {
+#iufcFeedsSection .top-area .left {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1.25rem;
+}
+#iufcFeedsSection .top-area .filter-area .btn-mode {
+  display: flex;
+  justify-content: start;
+}
+#iufcFeedsSection .top-area .filter-area .btn-mode button {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 1.125rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1.875rem;
+  padding: 0 1.25rem;
+  border-radius: 2.5rem;
+}
+#iufcFeedsSection .top-area .filter-area .btn-mode button.active {
+  color: var(--color-primary);
+  background-color: var(--color-secondary);
+  font-weight: 700;
+}
+#iufcFeedsSection .top-area .filter-area .select-mode {
+  display: none;
+}
+#iufcFeedsSection .top-area .right {
   display: flex;
   justify-content: end;
   align-items: center;
   gap: 0.625rem;
 }
-#iufcBlueMarket .top-area .btn-area button {
+#iufcFeedsSection .top-area .right button {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  opacity: 0.5;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  transform-origin: center;
+}
+#iufcFeedsSection .top-area .right button.prev {
+  transform: rotate(180deg);
+}
+#iufcFeedsSection .feeds-list-area {
+  margin-top: 1.25rem;
+  position: relative;
+  height: 28rem;
+}
+#iufcFeedsSection .feeds-list-area .feeds-swiper {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 700px);
+  height: 100%;
+}
+#iufcFeedsSection .feeds-swiper .swiper-slide {
+  max-width: 18.125rem;
+}
+#iufcFeedsSection .feeds-swiper .swiper-slide > a {
+  display: block;
+  background-color: #ffffff;
+  border-radius: 0.625rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  padding: 0.313rem;
+  width: 100%;
+}
+#iufcFeedsSection .feeds-swiper .swiper-slide .img-wrap {
+  border-radius: 0.313rem;
+  overflow: hidden;
+}
+#iufcFeedsSection .feeds-swiper .swiper-slide .img-wrap img {
+  width: 100%;
+  height: 21.875rem;
+  object-fit: cover;
+}
+#iufcFeedsSection .feeds-swiper .swiper-slide .txt-area {
+  padding: 0.625rem;
+  color: #111111;
+}
+#iufcFeedsSection .feeds-swiper .swiper-slide .txt-area .title {
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+#iufcFeedsSection .feeds-swiper .swiper-slide .txt-area .date {
+  font-weight: 500;
+  font-size: 0.875rem;
+  margin-top: 1.25rem;
+}
+
+#iufcBlueMarketSection {
+  padding: 7.5rem 0;
+}
+#iufcBlueMarketSection .top-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#iufcBlueMarketSection .top-area .btn-area {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 0.625rem;
+}
+#iufcBlueMarketSection .top-area .btn-area button {
   border: 1px solid var(--color-primary);
   color: var(--color-primary);
   opacity: 0.5;
@@ -300,19 +405,19 @@
   height: 2.5rem;
   transform-origin: center;
 }
-#iufcBlueMarket .top-area .btn-area button.prev {
+#iufcBlueMarketSection .top-area .btn-area button.prev {
   transform: rotate(180deg);
 }
-#iufcBlueMarket .goods-list {
+#iufcBlueMarketSection .goods-list {
   margin-top: 1.25rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.25rem;
 }
-#iufcBlueMarket .goods-list > li {
+#iufcBlueMarketSection .goods-list > li {
   position: relative;
 }
-#iufcBlueMarket .goods-list > li img {
+#iufcBlueMarketSection .goods-list > li img {
   position: relative;
   z-index: 0;
   overflow: hidden;
@@ -323,7 +428,7 @@
   aspect-ratio: 1;
   object-fit: contain;
 }
-#iufcBlueMarket .goods-list > li .txt-area {
+#iufcBlueMarketSection .goods-list > li .txt-area {
   position: relative;
   z-index: 1;
   background-color: #ffffff;
@@ -331,7 +436,7 @@
   font-weight: 400;
   font-size: 1rem;
 }
-#iufcBlueMarket .goods-list > li .txt-area .price {
+#iufcBlueMarketSection .goods-list > li .txt-area .price {
   font-weight: 700;
   font-size: 1.125rem;
   color: var(--color-primary);
@@ -483,25 +588,25 @@
     font-size: 1.25rem;
   }
 
-  #iufcBlueMarket {
+  #iufcBlueMarketSection {
     padding: 2.5rem 0;
   }
-  #iufcBlueMarket .top-area .btn-area {
+  #iufcBlueMarketSection .top-area .btn-area {
     gap: 0.313rem;
   }
-  #iufcBlueMarket .top-area .btn-area button {
+  #iufcBlueMarketSection .top-area .btn-area button {
     width: 2rem;
     height: 2rem;
   }
-  #iufcBlueMarket .goods-list {
+  #iufcBlueMarketSection .goods-list {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.625rem;
   }
-  #iufcBlueMarket .goods-list > li .txt-area {
+  #iufcBlueMarketSection .goods-list > li .txt-area {
     padding: 0.625rem 0;
     font-size: 0.875rem;
   }
-  #iufcBlueMarket .goods-list > li .txt-area .price {
+  #iufcBlueMarketSection .goods-list > li .txt-area .price {
     font-size: 0.875rem;
   }
 
