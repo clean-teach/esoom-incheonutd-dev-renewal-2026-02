@@ -1548,6 +1548,7 @@
     <script src="./js/header.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script>
+      /** 메인 비주얼 영역 Swiper */
       const swiper = new Swiper('.swiper', {
         // Optional parameters
         loop: true,
@@ -1572,6 +1573,7 @@
         },
       });
 
+      /** Match 영역 Swiper */
       const matchSwiper = new Swiper('.match-swiper', {
         slidesPerView: 'auto', // CSS 스타일로 보기 원할 때
         spaceBetween: 30,
@@ -1588,6 +1590,7 @@
         },
       });
 
+      /** Feeds 영역 Swiper */
       const feedsSwiper = new Swiper('.feeds-swiper', {
         slidesPerView: 'auto', // CSS 스타일로 보기 원할 때
         spaceBetween: 30,
