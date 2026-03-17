@@ -1592,14 +1592,17 @@
         slidesPerView: 'auto', // CSS 스타일로 보기 원할 때
         spaceBetween: 30,
         centeredSlides: true,
+        pagination: { type: 'custom' }, // 커스텀 페이지네이션
+        navigation: {
+          nextEl: '#iufcFeedsSection .top-area .right .next', // 다음 버튼
+          prevEl: '#iufcFeedsSection .top-area .right .prev', // 이전 버튼
+        },
         breakpoints: {
-          1600: {
-            enabled: false,
+          1280: {
             centeredSlides: false,
-            spaceBetween: 20,
           },
           640: {
-            spaceBetween: 40,
+            spaceBetween: 20,
           },
         },
       });
