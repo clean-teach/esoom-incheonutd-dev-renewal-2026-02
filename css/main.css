@@ -290,6 +290,10 @@
   align-items: center;
   gap: 1.25rem;
 }
+#iufcFeedsSection .top-area .filter-area {
+  display: flex;
+  justify-content: center;
+}
 #iufcFeedsSection .top-area .filter-area .btn-mode {
   display: flex;
   justify-content: start;
@@ -312,6 +316,18 @@
 }
 #iufcFeedsSection .top-area .filter-area .select-mode {
   display: none;
+  background: var(--color-secondary)
+    url(../assets/images/common/icon/svg/icon_arrow_bottom_01_1148ad.svg)
+    no-repeat calc(100% - 1.25rem) center;
+  color: var(--color-primary);
+  width: 100%;
+  max-width: 18.125rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 2.5rem;
+  padding: 0 1.25rem;
+  font-weight: 700;
+  font-size: 1rem;
 }
 #iufcFeedsSection .top-area .right {
   display: flex;
@@ -506,6 +522,32 @@
   }
 }
 
+@media screen and (max-width: 1280px) {
+  #iufcFeedsSection .top-area {
+    justify-content: center;
+    width: 100%;
+  }
+  #iufcFeedsSection .top-area .left {
+    flex-direction: column;
+    width: 100%;
+  }
+  #iufcFeedsSection .top-area .filter-area {
+    width: 100%;
+  }
+  #iufcFeedsSection .top-area .section-title {
+    text-align: center;
+  }
+  #iufcFeedsSection .top-area .filter-area .btn-mode {
+    display: none;
+  }
+  #iufcFeedsSection .top-area .filter-area .select-mode {
+    display: block;
+  }
+  #iufcFeedsSection .top-area .right {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .section-title {
     font-size: 1.5rem;
@@ -586,6 +628,17 @@
   }
   #matchScheduleSection .ranking-area .player-area .box .name {
     font-size: 1.25rem;
+  }
+
+  #iufcFeedsSection {
+    padding-top: 2.5rem;
+  }
+  #iufcFeedsSection .feeds-list-area {
+    position: static;
+  }
+  #iufcFeedsSection .feeds-list-area .feeds-swiper {
+    position: relative;
+    left: 0;
   }
 
   #iufcBlueMarketSection {
