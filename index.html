@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/layout/footer.css" />
     <link rel="stylesheet" href="css/layout/snb.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/lib/swiper.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
@@ -1679,17 +1680,65 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
 
     <script>
+      function updateProgress(swiper, value) {
+        const bullets = swiper.pagination.bullets;
+
+        bullets.forEach((bullet, i) => {
+          const bar = bullet.querySelector('.progress');
+
+          if (i < swiper.realIndex) {
+            // 이미 지난 슬라이드 → 100%
+            bar.style.width = '100%';
+          } else if (i === swiper.realIndex) {
+            // 현재 슬라이드 → 진행 중
+            bar.style.width = value * 100 + '%';
+          } else {
+            // 앞으로 남은 슬라이드 → 0%
+            bar.style.width = '0%';
+          }
+        });
+      }
+
+      function resetProgress(swiper) {
+        const bullets = swiper.pagination.bullets;
+
+        bullets.forEach((bullet) => {
+          const bar = bullet.querySelector('.progress');
+          bar.style.width = '0%';
+        });
+      }
+
       /** 메인 비주얼 영역 Swiper */
       const swiper = new Swiper('.swiper', {
         // Optional parameters
         loop: true,
         autoplay: {
           delay: 5000,
+          disableOnInteraction: false,
         },
 
         // If we need pagination
         pagination: {
           el: '.swiper-pagination',
+          clickable: true,
+          // bullet 커스터마이징
+          renderBullet: function (index, className) {
+            return `
+        <span class="${className}">
+          <span class="progress"></span>
+        </span>
+      `;
+          },
+        },
+
+        on: {
+          autoplayTimeLeft(swiper, time, progress) {
+            updateProgress(swiper, 1 - progress);
+          },
+
+          slideChange(swiper) {
+            resetProgress(swiper);
+          },
         },
 
         // Navigation arrows
@@ -1746,7 +1795,6 @@
       gsap.utils
         .toArray('#iufcMediaSection .media-area>li')
         .forEach((el, i) => {
-          console.log(el);
           gsap.fromTo(
             el,
             { y: `${60}%`, opacity: 0 },
