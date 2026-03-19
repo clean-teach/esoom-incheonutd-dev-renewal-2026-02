@@ -11,6 +11,12 @@
   const $totalMenuCloseButton = $siteMap.querySelector('.close-button');
   /** 스크롤 위로 가기 버튼 선택자 */
   const $scrollTopButton = document.querySelector('.scroll-top-button');
+  /** Header 메뉴 - 유틸리티 메뉴 선택자 */
+  const $utilNav = $header.querySelector('.util-nav');
+  /** Header 메뉴 - 유틸리티 메뉴 - "Ticket" 드롭다운 영역 선택자 */
+  const $ticketArea = $utilNav.querySelector('.ticket .drop-box');
+  /** Header 메뉴 - 유틸리티 메뉴 - "Ticket" 드롭다운 영역 선택자 */
+  const $userArea = $utilNav.querySelector('.user .drop-box');
 
   /** 브라우저 전체 화면 스크롤 핸들러 */
   const handleScroll = (event) => {
@@ -36,5 +42,16 @@
   });
   $scrollTopButton.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  $utilNav
+    .querySelector('.ticket>button')
+    .addEventListener('click', (event) => {
+      $userArea.classList.remove('view');
+      $ticketArea.classList.toggle('view');
+    });
+  $utilNav.querySelector('.user>button').addEventListener('click', (event) => {
+    $ticketArea.classList.remove('view');
+    $userArea.classList.toggle('view');
   });
 })();

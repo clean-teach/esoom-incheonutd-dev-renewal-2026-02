@@ -68,6 +68,157 @@
   align-items: center;
   gap: 1.25rem;
 }
+#header #topNav .util-nav > li {
+  position: relative;
+}
+#header #topNav .util-nav > li.active > button,
+#header #topNav .util-nav > li.active > a {
+  position: relative;
+}
+#header #topNav .util-nav > li.active > button::after,
+#header #topNav .util-nav > li.active > a::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  background-color: #e90000;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 100%;
+}
+
+#header #topNav .util-nav .drop-box {
+  background-color: #ffffff;
+  color: var(--color-mono-01);
+  border-radius: 0.625rem;
+  position: absolute;
+  top: 3.625rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  width: 11.25rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+#header #topNav .util-nav .drop-box.view {
+  display: block;
+}
+
+#header #topNav .util-nav .drop-box::after {
+  content: '';
+  background-color: inherit;
+  display: block;
+  width: 1.25rem;
+  aspect-ratio: 1/1;
+  transform-origin: center;
+  transform: rotate(45deg) translate(-50%);
+  position: absolute;
+  top: -0.15rem;
+  left: 50%;
+}
+
+#header #topNav .util-nav .ticket .drop-box .next-area {
+  padding: 1rem 1.25rem;
+  font-weight: 700;
+  font-size: 1rem;
+}
+#header #topNav .util-nav .ticket .drop-box .next-area .title {
+  color: #b1b1b1;
+  font-size: 0.75rem;
+}
+#header #topNav .util-nav .ticket .drop-box .next-area button {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.313rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.875rem;
+  margin-top: 0.625rem;
+  position: relative;
+}
+#header #topNav .util-nav .ticket .drop-box .next-area button.active::after,
+#header #topNav .util-nav .ticket .drop-box .next-area a.active::after {
+  content: '';
+  position: absolute;
+  top: 0.313rem;
+  right: 0.313rem;
+  display: block;
+  background-color: #e90000;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 100%;
+}
+#header #topNav .util-nav .ticket .drop-box .guide-area {
+  border-top: 1px solid #b1b1b1;
+  padding: 1rem 1.25rem;
+}
+#header #topNav .util-nav .ticket .drop-box .guide-area button {
+  border: 2px solid var(--color-primary);
+  border-radius: 0.313rem;
+  color: var(--color-primary);
+  width: 100%;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.313rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+#header #topNav .util-nav .ticket .drop-box .guide-area button > span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+#header
+  #topNav
+  .util-nav
+  .ticket
+  .drop-box
+  .guide-area
+  button
+  > span
+  span:nth-child(1) {
+  font-size: 0.875rem;
+}
+
+#header #topNav .util-nav .user .drop-box li + li {
+  border-top: 1px solid #b1b1b1;
+}
+#header #topNav .util-nav .user .drop-box a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-mono-01);
+  padding: 1rem 1.25rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+#header #topNav .util-nav .user .drop-box a .point {
+  color: var(--color-primary);
+}
+#header #topNav .util-nav .user .drop-box a.active .txt {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+#header #topNav .util-nav .user .drop-box a.active .txt::after {
+  content: '';
+  display: block;
+  background-color: #e90000;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 100%;
+}
 
 #header #gnb {
   background-color: rgba(17, 72, 173, 1);
