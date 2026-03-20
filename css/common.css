@@ -115,9 +115,98 @@ body {
   overflow-x: auto;
 }
 
+/****************************   컴포넌트   *******************************/
+.share-button-wrap {
+  position: relative;
+}
+.share-button-wrap .share-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.125rem;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  background-color: #f0f0f0;
+  color: var(--color-primary);
+}
+.share-button-wrap .dropdown-area {
+  padding: 0.625rem 1.25rem;
+  background-color: #f0f0f0;
+  border-radius: 0.313rem;
+  position: absolute;
+  right: 0;
+  top: 4.375rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+.share-button-wrap .dropdown-area::after {
+  content: '';
+  display: block;
+  background-color: #f0f0f0;
+  position: absolute;
+  top: -0.875rem;
+  right: 1.5625rem;
+  width: 1rem;
+  aspect-ratio: 1/1;
+  clip-path: polygon(
+    100% 0,
+    /* 우상단 (직각 꼭짓점) */ 100% 100%,
+    /* 우하단 */ 0 100% /* 좌하단 */
+  );
+}
+.share-button-wrap .dropdown-area > ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+}
+.share-button-wrap .dropdown-area button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+}
+.share-button-wrap .dropdown-area button.kakao {
+  background-color: #fae100;
+  color: #371d1e;
+}
+.share-button-wrap .dropdown-area button.facebook {
+  background-color: #1877f2;
+  color: #ffffff;
+}
+.share-button-wrap .dropdown-area button.x {
+  background-color: #242424;
+  color: #ffffff;
+}
+.share-button-wrap .dropdown-area button.link {
+  background-color: #1148ad;
+  color: #ffffff;
+}
+
 @media screen and (max-width: 1024px) {
   .center-wrap {
     padding: 0 1.25rem;
+  }
+
+  .share-button-wrap .share-button {
+    width: 2rem;
+  }
+  .share-button-wrap .share-button svg {
+    width: 1.125rem;
+  }
+  .share-button-wrap .dropdown-area {
+    padding: 0.625rem;
+    top: 3.125rem;
+  }
+  .share-button-wrap .dropdown-area::after {
+    right: 1rem;
+  }
+  .share-button-wrap .dropdown-area button {
+    width: 2rem;
+  }
+  .share-button-wrap .dropdown-area button svg {
+    width: 1.125rem;
   }
 }
 @media screen and (max-width: 640px) {
