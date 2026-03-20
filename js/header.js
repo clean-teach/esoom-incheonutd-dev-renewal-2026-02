@@ -5,10 +5,16 @@
   const $header = document.querySelector('#header');
   /** 전체 메뉴 버튼 선택자 */
   const $totalMenuButton = document.querySelector('#totalMenuButton');
-  /** 전체 메뉴 버튼 선택자 */
+  /** 전체 메뉴 선택자 */
+  const $fullMenu = document.querySelector('#fullMenuWrap');
+  /** 전체 메뉴(PC 버전) 선택자 */
   const $siteMap = document.querySelector('#siteMap');
-  /** 전체 메뉴 닫기 버튼 선택자 */
-  const $totalMenuCloseButton = $siteMap.querySelector('.close-button');
+  /** 전체 메뉴(PC 버전) 닫기 버튼 선택자 */
+  const $siteMapCloseButton = $siteMap.querySelector('.close-button');
+  /** 전체 메뉴(모바일 버전) 선택자 */
+  const $mobileNav = document.querySelector('#mobileNav');
+  /** 전체 메뉴(모바일 버전) 닫기 버튼 선택자 */
+  const $mobileNavCloseButton = $mobileNav.querySelector('.btn-wrap .close');
   /** 스크롤 위로 가기 버튼 선택자 */
   const $scrollTopButton = document.querySelector('.scroll-top-button');
   /** Header 메뉴 - 유틸리티 메뉴 선택자 */
@@ -35,10 +41,13 @@
   window.addEventListener('scroll', handleScroll);
 
   $totalMenuButton.addEventListener('click', () => {
-    $siteMap.classList.toggle('active');
+    $fullMenu.classList.toggle('active');
   });
-  $totalMenuCloseButton.addEventListener('click', () => {
-    $siteMap.classList.remove('active');
+  $siteMapCloseButton.addEventListener('click', () => {
+    $fullMenu.classList.remove('active');
+  });
+  $mobileNavCloseButton.addEventListener('click', () => {
+    $fullMenu.classList.remove('active');
   });
   $scrollTopButton.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
