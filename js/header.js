@@ -15,6 +15,8 @@
   const $mobileNav = document.querySelector('#mobileNav');
   /** 전체 메뉴(모바일 버전) 닫기 버튼 선택자 */
   const $mobileNavCloseButton = $mobileNav.querySelector('.btn-wrap .close');
+  /** 모바일 메뉴 아코디언 버튼 선택자 */
+  const $mobileNavAccordion = $mobileNav.querySelectorAll('.accordion-item');
   /** 스크롤 위로 가기 버튼 선택자 */
   const $scrollTopButton = document.querySelector('.scroll-top-button');
   /** Header 메뉴 - 유틸리티 메뉴 선택자 */
@@ -62,5 +64,13 @@
   $utilNav.querySelector('.user>button').addEventListener('click', (event) => {
     $ticketArea.classList.remove('view');
     $userArea.classList.toggle('view');
+  });
+
+  $mobileNavAccordion.forEach((item) => {
+    const button = item.querySelector('.accordion-button');
+
+    button.addEventListener('click', (event) => {
+      item.classList.toggle('active');
+    });
   });
 })();
