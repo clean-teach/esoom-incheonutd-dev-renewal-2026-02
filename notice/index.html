@@ -7,6 +7,8 @@
 
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" href="../css/common.css" />
+
+    <script src="../js/common.js"></script>
   </head>
   <body>
     <div
@@ -112,7 +114,12 @@
               </button>
             </li>
             <li>
-              <button type="button" title="링크 클립보드 복사" class="link">
+              <button
+                type="button"
+                title="링크 클립보드 복사"
+                class="link"
+                onclick="copyCurrentUrl()"
+              >
                 <svg
                   width="24"
                   height="24"
