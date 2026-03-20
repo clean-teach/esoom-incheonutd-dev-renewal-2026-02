@@ -170,7 +170,8 @@ body {
   align-items: center;
   gap: 0.625rem;
 }
-.share-button-wrap .dropdown-area button {
+.share-button-wrap .dropdown-area button,
+.share-button-wrap .dropdown-area a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -179,29 +180,36 @@ body {
   border-radius: 100%;
   transition: all 0.2s ease-in-out;
 }
-.share-button-wrap .dropdown-area button:hover {
+.share-button-wrap .dropdown-area button:hover,
+.share-button-wrap .dropdown-area a:hover {
   filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.2));
 }
-.share-button-wrap .dropdown-area button svg {
+.share-button-wrap .dropdown-area button svg,
+.share-button-wrap .dropdown-area a svg {
   width: 2rem;
 }
-.share-button-wrap .dropdown-area button.kakao {
+.share-button-wrap .dropdown-area button.kakao,
+.share-button-wrap .dropdown-area a.kakao {
   background-color: #fae100;
   color: #371d1e;
 }
-.share-button-wrap .dropdown-area button.kakao svg {
+.share-button-wrap .dropdown-area button.kakao svg,
+.share-button-wrap .dropdown-area a.kakao svg {
   width: 2.5rem;
   height: 2rem;
 }
-.share-button-wrap .dropdown-area button.facebook {
+.share-button-wrap .dropdown-area button.facebook,
+.share-button-wrap .dropdown-area a.facebook {
   background-color: #1877f2;
   color: #ffffff;
 }
-.share-button-wrap .dropdown-area button.x {
+.share-button-wrap .dropdown-area button.x,
+.share-button-wrap .dropdown-area a.x {
   background-color: #242424;
   color: #ffffff;
 }
-.share-button-wrap .dropdown-area button.link {
+.share-button-wrap .dropdown-area button.link,
+.share-button-wrap .dropdown-area a.link {
   background-color: #1148ad;
   color: #ffffff;
 }
@@ -224,13 +232,16 @@ body {
   .share-button-wrap .dropdown-area::after {
     right: 1rem;
   }
-  .share-button-wrap .dropdown-area button {
+  .share-button-wrap .dropdown-area button,
+  .share-button-wrap .dropdown-area a {
     width: 2rem;
   }
-  .share-button-wrap .dropdown-area button svg {
+  .share-button-wrap .dropdown-area button svg,
+  .share-button-wrap .dropdown-area a svg {
     width: 1.125rem;
   }
-  .share-button-wrap .dropdown-area button.kakao svg {
+  .share-button-wrap .dropdown-area button.kakao svg,
+  .share-button-wrap .dropdown-area a.kakao svg {
     height: 1.5rem;
   }
 }

@@ -93,7 +93,12 @@
               </button>
             </li>
             <li>
-              <button type="button" title="X에 공유" class="x">
+              <a
+                href={{`https://twitter.com/intent/tweet?text=이 글을 추천합니다!&url=${window.location.href}&hashtags=coding,html`}}
+                target="_blank"
+                title="X에 공유"
+                class="x"
+              >
                 <svg
                   width="28"
                   height="28"
@@ -111,7 +116,7 @@
                 </svg>
 
                 <span class="hide">X에 공유</span>
-              </button>
+              </a>
             </li>
             <li>
               <button
