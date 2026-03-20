@@ -167,9 +167,16 @@ body {
   aspect-ratio: 1/1;
   border-radius: 100%;
 }
+.share-button-wrap .dropdown-area button svg {
+  width: 2rem;
+}
 .share-button-wrap .dropdown-area button.kakao {
   background-color: #fae100;
   color: #371d1e;
+}
+.share-button-wrap .dropdown-area button.kakao svg {
+  width: 2.5rem;
+  height: 2rem;
 }
 .share-button-wrap .dropdown-area button.facebook {
   background-color: #1877f2;
@@ -207,6 +214,9 @@ body {
   }
   .share-button-wrap .dropdown-area button svg {
     width: 1.125rem;
+  }
+  .share-button-wrap .dropdown-area button.kakao svg {
+    height: 1.5rem;
   }
 }
 @media screen and (max-width: 640px) {
