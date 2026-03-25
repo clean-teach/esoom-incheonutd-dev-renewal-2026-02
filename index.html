@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/layout/snb.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/lib/swiper.css" />
+    <link rel="stylesheet" href="css/popup.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
@@ -2656,6 +2657,147 @@
       </div>
     </footer>
 
+    <!-- popup -->
+    <div class="popup" style="display: block">
+      <div class="center-wrap popup_inner">
+        <div class="popup_content">
+          <div class="popup_body">
+            <div
+              class="slider popup_slider auto loop swiper-initialized swiper-horizontal swiper-pointer-events"
+            >
+              <div
+                class="swiper-wrapper"
+                id="swiper-wrapper-37a904df37325a10f"
+                aria-live="off"
+                style="
+                  transform: translate3d(-800px, 0px, 0px);
+                  transition-duration: 0ms;
+                "
+              >
+                <div
+                  class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active"
+                  data-swiper-slide-index="1"
+                  role="group"
+                  aria-label="2 / 2"
+                  style="width: 400px"
+                >
+                  <a href="">
+                    <!-- 링크 있는 경우 -->
+
+                    <picture>
+                      <source
+                        srcset="./assets/images/temp/feeds/feed01.jpg"
+                        media="(max-width: 1024px)"
+                      />
+                      <img
+                        src="./assets/images/temp/feeds/feed01.jpg"
+                        alt=""
+                      /><!-- pc -->
+                    </picture>
+                  </a>
+                </div>
+
+                <!-- slide -->
+                <div
+                  class="swiper-slide swiper-slide-prev swiper-slide-duplicate-next"
+                  data-swiper-slide-index="0"
+                  role="group"
+                  aria-label="1 / 2"
+                  style="width: 400px"
+                >
+                  <picture>
+                    <source
+                      srcset="./assets/images/temp/feeds/feed02.jpg"
+                      media="(max-width: 1024px)"
+                    />
+                    <img
+                      src="./assets/images/temp/feeds/feed02.jpg"
+                      alt=""
+                    /><!-- pc -->
+                  </picture>
+                </div>
+                <!-- //slide -->
+
+                <!-- slide -->
+                <div
+                  class="swiper-slide swiper-slide-active"
+                  data-swiper-slide-index="1"
+                  role="group"
+                  aria-label="2 / 2"
+                  style="width: 400px"
+                >
+                  <a href="">
+                    <!-- 링크 있는 경우 -->
+
+                    <picture>
+                      <source
+                        srcset="./assets/images/temp/feeds/feed03.jpg"
+                        media="(max-width: 1024px)"
+                      />
+                      <img
+                        src="./assets/images/temp/feeds/feed03.jpg"
+                        alt=""
+                      /><!-- pc -->
+                    </picture>
+                  </a>
+                </div>
+                <!-- //slide -->
+
+                <div
+                  class="swiper-slide swiper-slide-duplicate swiper-slide-next swiper-slide-duplicate-prev"
+                  data-swiper-slide-index="0"
+                  role="group"
+                  aria-label="1 / 2"
+                  style="width: 400px"
+                >
+                  <picture>
+                    <source
+                      srcset="./assets/images/temp/feeds/feed04.jpg"
+                      media="(max-width: 1024px)"
+                    />
+                    <img
+                      src="./assets/images/temp/feeds/feed04.jpg"
+                      alt=""
+                    /><!-- pc -->
+                  </picture>
+                </div>
+              </div>
+              <div
+                class="swiper-pagination type1 swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"
+              >
+                <span
+                  class="swiper-pagination-bullet"
+                  tabindex="0"
+                  role="button"
+                  aria-label="Go to slide 1"
+                ></span
+                ><span
+                  class="swiper-pagination-bullet swiper-pagination-bullet-active"
+                  tabindex="0"
+                  role="button"
+                  aria-label="Go to slide 2"
+                  aria-current="true"
+                ></span>
+              </div>
+              <span
+                class="swiper-notification"
+                aria-live="assertive"
+                aria-atomic="true"
+              ></span>
+            </div>
+          </div>
+          <div class="popup_btns">
+            <button type="button" class="el_btn popupClose" data-cookie="true">
+              오늘 하루 보지 않기
+            </button>
+            <button type="button" class="el_btn popupClose">닫기</button>
+          </div>
+        </div>
+      </div>
+      <div class="back popupClose"></div>
+    </div>
+    <!-- popup -->
+
     <script src="./js/header.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
@@ -2770,6 +2912,16 @@
             spaceBetween: 20,
           },
         },
+      });
+
+      /** Popup 영역 Swiper */
+      const popupSwiper = new Swiper('.popup_slider', {
+        spaceBetween: 0,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        loop: true,
       });
 
       gsap.registerPlugin(ScrollTrigger);

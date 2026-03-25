@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+/***********************  Popup 관련 된 커스텀 CSS  ***************************/
+
+.popup {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: none;
+  pointer-events: none;
+}
+.popup .back {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: var(--dimmed01);
+  pointer-events: auto;
+}
+.popup .popup_inner {
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+.popup_content {
+  display: block;
+  pointer-events: auto;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  max-width: 400px;
+  background: #fff;
+  pointer-events: all;
+}
+.popup_slider {
+  position: relative;
+}
+.popup_slider .swiper-slide a {
+  display: block;
+}
+.popup_slider .swiper-pagination {
+  bottom: 20px;
+}
+.popup_slider .swiper-pagination-bullet {
+  opacity: 1;
+}
+.popup_btns {
+  display: flex;
+  background: #fff;
+  border-right: 1px solid #e6e6e6;
+}
+.popup_btns .el_btn {
+  flex: 1;
+  font-size: 14px;
+  height: 42px;
+  border-radius: 0;
+  background: #fff;
+  color: #181818;
+}
+.popup_btns .el_btn + .el_btn {
+  border-left: 1px solid #e6e6e6;
+}
+
+@media (min-width: 1025px) {
+  .popup,
+  .popup .popup_inner {
+    pointer-events: none;
+  }
+  .popup .back {
+    display: none;
+  }
+  .popup .popup_inner {
+    padding-top: calc(120px + 30px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .popup .popup_inner {
+    justify-content: center;
+    align-items: center;
+  }
+}
