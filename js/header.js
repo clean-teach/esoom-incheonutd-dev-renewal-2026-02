@@ -25,6 +25,13 @@
   const $ticketArea = $utilNav.querySelector('.ticket .drop-box');
   /** Header 메뉴 - 유틸리티 메뉴 - "Ticket" 드롭다운 영역 선택자 */
   const $userArea = $utilNav.querySelector('.user .drop-box');
+  /** 서브 페이지 - 상단 타이틀 영역 선택자 */
+  const $subPageTitleArea = document.querySelector('#subPageTitleArea');
+  /** 서브 페이지 - 상단 타이틀 영역 - 배경 이미지 선택자 */
+  const $subPageTitleAreaBg = $subPageTitleArea.querySelector('.bg-wrap');
+
+  /** 서브 페이지 - 상단 타이틀 영역 높이 값 */
+  const subPageTitleAreaHeight = $subPageTitleArea.clientHeight;
 
   /** 브라우저 전체 화면 스크롤 핸들러 */
   const handleScroll = (event) => {
@@ -36,6 +43,10 @@
       }
     } else {
       $header.classList.remove('active');
+    }
+
+    if (window.pageYOffset < subPageTitleAreaHeight) {
+      $subPageTitleAreaBg.style.backgroundPositionY = `${window.pageYOffset / 2}px`;
     }
     lastScrollTop = window.pageYOffset;
   };
