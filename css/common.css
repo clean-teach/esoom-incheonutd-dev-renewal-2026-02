@@ -95,6 +95,9 @@ body {
   word-break: keep-all;
   background: #fff;
 }
+button {
+  font-family: 'Pretendard', sans-serif;
+}
 
 /************************  Utility  *************************/
 .center-wrap {

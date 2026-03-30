@@ -194,7 +194,9 @@
 #header #topNav .util-nav .user .drop-box li + li {
   border-top: 1px solid #b1b1b1;
 }
-#header #topNav .util-nav .user .drop-box a {
+#header #topNav .util-nav .user .drop-box a,
+#header #topNav .util-nav .user .drop-box button {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -203,15 +205,18 @@
   font-weight: 700;
   font-size: 0.875rem;
 }
-#header #topNav .util-nav .user .drop-box a .point {
+#header #topNav .util-nav .user .drop-box a .point,
+#header #topNav .util-nav .user .drop-box button .point {
   color: var(--color-primary);
 }
-#header #topNav .util-nav .user .drop-box a.active .txt {
+#header #topNav .util-nav .user .drop-box a.active .txt,
+#header #topNav .util-nav .user .drop-box button.active .txt {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
-#header #topNav .util-nav .user .drop-box a.active .txt::after {
+#header #topNav .util-nav .user .drop-box a.active .txt::after,
+#header #topNav .util-nav .user .drop-box button.active .txt::after {
   content: '';
   display: block;
   background-color: #e90000;
