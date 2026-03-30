@@ -28,10 +28,10 @@
   /** 서브 페이지 - 상단 타이틀 영역 선택자 */
   const $subPageTitleArea = document.querySelector('#subPageTitleArea');
   /** 서브 페이지 - 상단 타이틀 영역 - 배경 이미지 선택자 */
-  const $subPageTitleAreaBg = $subPageTitleArea.querySelector('.bg-wrap');
+  const $subPageTitleAreaBg = $subPageTitleArea?.querySelector('.bg-wrap');
 
   /** 서브 페이지 - 상단 타이틀 영역 높이 값 */
-  const subPageTitleAreaHeight = $subPageTitleArea.clientHeight;
+  const subPageTitleAreaHeight = $subPageTitleArea?.clientHeight;
 
   /** 브라우저 전체 화면 스크롤 핸들러 */
   const handleScroll = (event) => {
