@@ -90,6 +90,12 @@
 #matchScheduleSection .schedule-area > li.away .opposing {
   order: 1;
 }
+#matchScheduleSection .schedule-area .title {
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  font-weight: 700;
+  font-size: 1rem;
+}
 #matchScheduleSection .schedule-area .date-time-area {
   font-weight: 800;
   font-size: 1.625rem;
