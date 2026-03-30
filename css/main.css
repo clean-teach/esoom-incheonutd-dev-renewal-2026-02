@@ -184,12 +184,41 @@
   border-left: 1px solid rgba(17, 72, 173, 0.3);
 }
 
-#matchScheduleSection .ranking-area > div > .title {
+#matchScheduleSection .ranking-area .top-area {
+  position: relative;
+}
+#matchScheduleSection .ranking-area .top-area .title {
   text-transform: uppercase;
   font-weight: 900;
   font-size: 1.625rem;
   color: var(--color-primary);
   text-align: center;
+}
+#matchScheduleSection .ranking-area .top-area .btn-wrap {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#matchScheduleSection .ranking-area .top-area .more-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(17, 72, 173, 0.5);
+  color: rgba(17, 72, 173, 0.5);
+  border-radius: 100%;
+  width: 2.5rem;
+  aspect-ratio: 1/1;
+  transition: all 0.2s ease-in-out;
+}
+#matchScheduleSection .ranking-area .top-area .more-btn:hover {
+  background-color: rgba(17, 72, 173, 0.5);
+  color: #ffffff;
+  border-color: rgba(17, 72, 173, 0);
+}
+#matchScheduleSection .ranking-area .top-area .more-btn:active {
+  transform-origin: center;
+  transform: scale(0.9);
 }
 
 #matchScheduleSection .ranking-area .team-area table {
