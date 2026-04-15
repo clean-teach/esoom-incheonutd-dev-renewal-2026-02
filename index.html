@@ -2111,22 +2111,67 @@
                   </button>
                 </div>
               </div>
-              <ul class="event-list">
-                <li>
-                  <a href="notice/index.html" title="페이지 이동"
-                    ><img
-                      src="./assets/images/temp/event/eventlist_260211 1.jpg"
-                      alt=""
-                  /></a>
-                </li>
-                <li>
-                  <a href="notice/index.html" title="페이지 이동"
-                    ><img
-                      src="./assets/images/temp/event/eventlist_260211 1.jpg"
-                      alt=""
-                  /></a>
-                </li>
-              </ul>
+              <!-- Swiper -->
+              <div class="event-swiper">
+                <ul class="swiper-wrapper event-list">
+                  <li class="swiper-slide">
+                    <a href="notice/index.html" title="페이지 이동"
+                      ><img
+                        src="./assets/images/temp/event/eventlist_260211 1.jpg"
+                        alt=""
+                    /></a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a href="notice/index.html" title="페이지 이동"
+                      ><img
+                        src="./assets/images/temp/event/eventlist_260211 1.jpg"
+                        alt=""
+                    /></a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a href="notice/index.html" title="페이지 이동"
+                      ><img
+                        src="./assets/images/temp/event/eventlist_260211 1.jpg"
+                        alt=""
+                    /></a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a href="notice/index.html" title="페이지 이동"
+                      ><img
+                        src="./assets/images/temp/event/eventlist_260211 1.jpg"
+                        alt=""
+                    /></a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a href="notice/index.html" title="페이지 이동"
+                      ><img
+                        src="./assets/images/temp/event/eventlist_260211 1.jpg"
+                        alt=""
+                    /></a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a href="notice/index.html" title="페이지 이동"
+                      ><img
+                        src="./assets/images/temp/event/eventlist_260211 1.jpg"
+                        alt=""
+                    /></a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a href="notice/index.html" title="페이지 이동"
+                      ><img
+                        src="./assets/images/temp/event/eventlist_260211 1.jpg"
+                        alt=""
+                    /></a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a href="notice/index.html" title="페이지 이동"
+                      ><img
+                        src="./assets/images/temp/event/eventlist_260211 1.jpg"
+                        alt=""
+                    /></a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -2923,6 +2968,31 @@
         // And if we need scrollbar
         scrollbar: {
           el: '.swiper-scrollbar',
+        },
+      });
+
+      /** Event 영역 Swiper */
+      const eventSwiper = new Swiper('.event-swiper', {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        grid: {
+          rows: 1,
+        },
+        loop: true,
+        spaceBetween: 30,
+        navigation: {
+          nextEl: '#eventSection .navigation-area .next', // 다음 버튼
+          prevEl: '#eventSection .navigation-area .prev', // 이전 버튼
+        },
+        breakpoints: {
+          1024: {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+          },
+          768: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+          },
         },
       });
 

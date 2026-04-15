@@ -29,7 +29,7 @@
   display: block;
   width: 100%;
   max-width: 1400px;
-  aspect-ratio: 1/0.186;
+  aspect-ratio: 1/0.086;
 }
 #matchScheduleSection .section-title {
   text-align: center;
@@ -312,15 +312,18 @@
 
 #eventSection > div {
   position: relative;
+  width: 100%;
 }
 #eventSection .shadow-wrap {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
   transform: translateY(-50%);
   filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.2));
 }
 #eventSection .box {
+  width: 100%;
   background-color: #2b3137;
   padding: 2.5rem;
   clip-path: polygon(
@@ -336,6 +339,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 1.875rem;
 }
 #eventSection .box .navigation-area {
   display: flex;
@@ -358,10 +362,9 @@
 #eventSection .box .navigation-area button.prev {
   transform: rotate(180deg);
 }
-#eventSection .box .event-list {
-  display: flex;
-  gap: 1.25rem;
-  margin-top: 1.875rem;
+#eventSection .box .event-swiper {
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .bg-field {
@@ -373,9 +376,9 @@
 .bg-field::before {
   content: '';
   display: block;
-  width: 1005;
+  width: 100%;
   max-width: 1400px;
-  aspect-ratio: 1/0.124;
+  aspect-ratio: 1/0.046;
 }
 .bg-field .section-title {
   color: #ffffff;
@@ -781,6 +784,9 @@
   #matchScheduleSection {
     padding: 2.5rem 0;
   }
+  #matchScheduleSection::after {
+    aspect-ratio: 1/0.186;
+  }
 
   #matchScheduleSection .schedule-area {
     margin-top: 1.25rem;
@@ -857,6 +863,9 @@
 
   .bg-field {
     padding: 2.5rem 0;
+  }
+  .bg-field::before {
+    aspect-ratio: 1/0.126;
   }
 
   #iufcFeedsSection {
@@ -949,13 +958,24 @@
 
 @media screen and (max-width: 768px) {
   #matchScheduleSection::after {
-    aspect-ratio: 1/0.629;
+    aspect-ratio: 1/0.326;
   }
-  #eventSection .box .event-list {
-    flex-direction: column;
+  #eventSection .box {
+    padding: 1.25rem;
+    clip-path: polygon(
+      30px 0,
+      /* 좌상단 컷 시작 */ 100% 0,
+      100% calc(100% - 30px),
+      /* 우하단 컷 시작 */ calc(100% - 30px) 100%,
+      0 100%,
+      0 30px /* 좌상단 컷 끝 */
+    );
+  }
+  #eventSection .box .top-area {
+    margin-bottom: 1.25rem;
   }
   .bg-field::before {
-    aspect-ratio: 1/0.497;
+    aspect-ratio: 1/0.286;
   }
 
   #iufcFeedsSection {
