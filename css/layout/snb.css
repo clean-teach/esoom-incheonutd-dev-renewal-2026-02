@@ -66,25 +66,20 @@
   transform: scale(0.9);
 }
 
-@media screen and (max-width: 1024px) {
-  .scroll-top-button {
-    right: 1.5rem;
-    bottom: 1.5rem;
-  }
-}
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1600px) {
   #snb {
     position: relative;
     right: 0;
-    top: -1.875rem;
+    top: 0;
     transform: translateY(0);
-    padding: 0 1.25rem;
+    padding: 3rem 1.25rem 0;
   }
 
   #snb .quick-nav {
     border-radius: 0.625rem;
     width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
     box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.2);
     grid-template-columns: repeat(6, 1fr);
     gap: 1px;
@@ -97,7 +92,14 @@
   }
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 1024px) {
+  .scroll-top-button {
+    right: 1.5rem;
+    bottom: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
   #snb .quick-nav {
     grid-template-columns: repeat(3, 1fr);
   }
